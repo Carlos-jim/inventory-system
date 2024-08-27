@@ -37,7 +37,7 @@ export default function MainContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
       >
-        <Image src="/icons/work-plan.png" alt="Statistics" width={124} height={124} className="mb-4" />
+        <Image src="/icons/stadistics.png" alt="Statistics" width={124} height={124} className="mb-4" />
         <h3 className="text-lg font-semibold">ESTADISTICAS</h3>
       </motion.div>
     </div>
