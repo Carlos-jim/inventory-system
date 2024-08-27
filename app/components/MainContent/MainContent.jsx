@@ -1,6 +1,9 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import AddProduct from "@/public/icons/add-to-basket.png";
+import AvaibleProduct from "@/public/icons/in-stock.png";
+import Stadistics from "@/public/icons/stadistics.png";
 
 export default function MainContent() {
   return (
@@ -11,9 +14,16 @@ export default function MainContent() {
         whileHover={{ scale: 1.1 }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }}
       >
-        <Image src="/icons/add-to-basket.png" alt="Add Product" width={124} height={124} className="mb-4" />
+        <Image
+          src={AddProduct}
+          alt="Add Product"
+          width={124}
+          height={124}
+          className="mb-4"
+          placeholder="blur"
+        />
         <h3 className="text-lg font-semibold">AGREGAR PRODUCTO</h3>
       </motion.div>
 
@@ -23,9 +33,16 @@ export default function MainContent() {
         whileHover={{ scale: 1.1 }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        transition={{ duration: 0.2 }}
       >
-        <Image src="/icons/in-stock.png" alt="Available Products" width={124} height={124} className="mb-4" />
+        <Image
+          src={AvaibleProduct}
+          alt="Available Products"
+          width={124}
+          height={124}
+          className="mb-4"
+          placeholder="blur"
+        />
         <h3 className="text-lg font-semibold">PRODUCTOS DISPONIBLES</h3>
       </motion.div>
 
@@ -35,9 +52,16 @@ export default function MainContent() {
         whileHover={{ scale: 1.1 }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.4 }}
+        transition={{ duration: 0.2}}
       >
-        <Image src="/icons/stadistics.png" alt="Statistics" width={124} height={124} className="mb-4" />
+        <Image
+          src={Stadistics}
+          alt="Statistics"
+          width={124}
+          height={124}
+          className="mb-4"
+          placeholder="blur"
+        />
         <h3 className="text-lg font-semibold">ESTADISTICAS</h3>
       </motion.div>
     </div>
