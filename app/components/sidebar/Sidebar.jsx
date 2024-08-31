@@ -24,27 +24,27 @@ export default function Sidebar() {
 
       {/* Menu Items */}
       <ul className="pt-10">
-        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center'}`}>
+        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center hover:cursor-pointer'}`}>
           <FaHome size={24} />
-          {isOpen && <span className="ml-4">Home</span>}
+          {isOpen && <span className="ml-4 hover:cursor-pointer">Home</span>}
         </li>
-        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center'}`}>
+        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center hover:cursor-pointer'}`}>
           <AiOutlinePlus size={24} />
-          {isOpen && <span className="ml-4">Agregar</span>}
+          {isOpen && <span className="ml-4 hover:cursor-pointer">Agregar</span>}
         </li>
-        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400 bg-teal-400 rounded-lg' : 'justify-center'}`}>
+        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400 bg-teal-400 rounded-lg' : 'justify-center hover:cursor-pointer'}`}>
           <FaBoxOpen size={24} />
-          {isOpen && <span className="ml-4">Disponibles</span>}
+          {isOpen && <span className="ml-4 hover:cursor-pointer">Disponibles</span>}
         </li>
-        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center'}`}>
+        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center hover:cursor-pointer'}`}>
           <FaChartBar size={24} />
-          {isOpen && <span className="ml-4">Estadísticas</span>}
+          {isOpen && <span className="ml-4 hover:cursor-pointer">Estadísticas</span>}
         </li>
       </ul>
 
       {/* Logout */}
-      <div className={`absolute bottom-5 w-full ${isOpen ? 'text-center' : 'flex items-center'}`}>
-        <button className="flex items-center w-full p-2 text-white hover:bg-teal-400">
+      <div className={`absolute bottom-5 w-30 ${isOpen ? 'hover:bg-teal-400' : 'justify-center hover:cursor-pointer'}`}>
+        <button className="flex items-center w-full p-2 text-white">
           <FaPowerOff size={24} />
           {isOpen && <span className="ml-4">Salir</span>}
         </button>
