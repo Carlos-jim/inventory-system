@@ -1,52 +1,54 @@
 "use client"
-import { FaHome, FaPlusSquare, FaChartBar, FaPowerOff, FaBars } from 'react-icons/fa';
 import { useState } from 'react';
+import { FaHome, FaBoxOpen, FaChartBar, FaPowerOff } from 'react-icons/fa';
+import { AiOutlinePlus } from 'react-icons/ai';
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <>
-      {/* Hamburger button for small screens */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden p-4 bg-teal-500 text-white"
-      >
-        <FaBars />
-      </button>
-
-      {/* Sidebar */}
-      <div className={`flex flex-col h-screen bg-teal-500 text-white w-64 fixed z-50 transform transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      } md:translate-x-0 md:static`}>
-        <div className="flex items-center justify-center h-20">
-          <div className="bg-gray-300 rounded-full w-16 h-16"></div>
-        </div>
-        <nav className="mt-10">
-          <a href="#" className="flex items-center py-2 px-8 bg-teal-400">
-            <FaHome className="mr-3 w-7 h-7" /> HOME
-          </a>
-          <a href="#" className="flex items-center py-2 px-8 hover:bg-teal-400">
-            <FaPlusSquare className="mr-3 w-7 h-7" /> AGREGAR
-          </a>
-          <a href="#" className="flex items-center py-2 px-8 hover:bg-teal-400">
-            <FaChartBar className="mr-3 w-7 h-7" /> ESTADISTICAS
-          </a>
-        </nav>
-        <div className="mt-auto flex items-center justify-start py-4 px-7">
-          <a href="#" className="flex items-center py-2 hover:bg-teal-400">
-            <FaPowerOff className="mr-3 w-7 h-7" /> SALIR
-          </a>
+    <div className={`h-screen ${isOpen ? 'w-64' : 'w-20'} bg-teal-500 p-5 relative duration-300`}>
+      {/* Hamburger Menu */}
+      <div className="absolute top-3 left-3 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+        <div className="h-6 w-6 text-white">
+          <div className="w-full h-1 bg-white mb-1"></div>
+          <div className="w-full h-1 bg-white mb-1"></div>
+          <div className="w-full h-1 bg-white"></div>
         </div>
       </div>
-      
-      {/* Backdrop when sidebar is open on small screens */}
-      {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black opacity-50 md:hidden"
-        ></div>
-      )}
-    </>
+
+      {/* Profile Circle */}
+      <div className="flex justify-center">
+        <div className={`h-16 w-16 rounded-full bg-gray-300 mt-10 ${!isOpen && 'hidden'}`}></div>
+      </div>
+
+      {/* Menu Items */}
+      <ul className="pt-10">
+        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center'}`}>
+          <FaHome size={24} />
+          {isOpen && <span className="ml-4">Home</span>}
+        </li>
+        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center'}`}>
+          <AiOutlinePlus size={24} />
+          {isOpen && <span className="ml-4">Agregar</span>}
+        </li>
+        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400 bg-teal-400 rounded-lg' : 'justify-center'}`}>
+          <FaBoxOpen size={24} />
+          {isOpen && <span className="ml-4">Disponibles</span>}
+        </li>
+        <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center'}`}>
+          <FaChartBar size={24} />
+          {isOpen && <span className="ml-4">Estadísticas</span>}
+        </li>
+      </ul>
+
+      {/* Logout */}
+      <div className={`absolute bottom-5 w-full ${isOpen ? 'text-center' : 'flex items-center'}`}>
+        <button className="flex items-center w-full p-2 text-white hover:bg-teal-400">
+          <FaPowerOff size={24} />
+          {isOpen && <span className="ml-4">Salir</span>}
+        </button>
+      </div>
+    </div>
   );
 }

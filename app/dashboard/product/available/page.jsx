@@ -6,7 +6,7 @@ import MainContentListProduct from '@/app/components/MainContent/MainContentList
 export default function AddProduct() {
     return(
         <div className="flex">
-
+          <Sidebar/>
         <div className="flex-1 flex flex-col">
           <TopNav />
           <MainContentListProduct />
