@@ -1,4 +1,4 @@
-import Sidebar from '../../../components/sidebar/Sidebar';
+import Sidebar from '@/app/components/sidebar/Sidebar';
 import TopNav from '@/app/components/sidebar/TopNav';
 import MainContentListProduct from '@/app/components/MainContent/MainContentListProduct';
 

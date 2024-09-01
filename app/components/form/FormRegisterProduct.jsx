@@ -36,7 +36,7 @@ export default function FormRegisterProduct() {
             <motion.input
               {...register("nombre")}
               type="text"
-              className="mt-1 block w-full border rounded-md shadow-sm"
+              className="mt-1 block w-full border pt-1 rounded-md shadow-sm"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -50,7 +50,7 @@ export default function FormRegisterProduct() {
             <motion.input
               {...register("categoria")}
               type="text"
-              className="mt-1 block w-full border rounded-md shadow-sm"
+              className="mt-1 block w-full border pt-1 rounded-md shadow-sm"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -64,7 +64,7 @@ export default function FormRegisterProduct() {
           </label>
           <motion.textarea
             {...register("descripcion")}
-            className="mt-1 block w-full border rounded-md shadow-sm"
+            className="mt-1 block w-full border  rounded-md shadow-sm"
             rows="4"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export default function FormRegisterProduct() {
             <motion.input
               {...register("precio")}
               type="number"
-              className="mt-1 block w-full border rounded-md shadow-sm"
+              className="mt-1 block w-full pt-1 border rounded-md shadow-sm"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -94,7 +94,7 @@ export default function FormRegisterProduct() {
             <motion.input
               {...register("stock")}
               type="number"
-              className="mt-1 block w-full border rounded-md shadow-sm"
+              className="mt-1 block w-full pt-1 border rounded-md shadow-sm"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -103,18 +103,26 @@ export default function FormRegisterProduct() {
           </div>
         </div>
         <div className="flex justify-end">
-          <button
+        <motion.button
             type="button"
             onClick={() => reset()}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
           >
             Limpiar
-          </button>
+            </motion.button>
           <motion.button
             type="submit"
             className="inline-flex items-center ml-4 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             Guardar
           </motion.button>

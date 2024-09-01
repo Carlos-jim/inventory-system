@@ -1,6 +1,6 @@
-import Sidebar from '../../components/sidebar/Sidebar';
-import TopNav from '../../components/sidebar/TopNav';
-import MainContent from '../../components/MainContent/MainContent';
+import Sidebar from '@/app/components/sidebar/Sidebar';
+import TopNav from '@/app/components/sidebar/TopNav';
+import MainContent from '@/app/components/MainContent/MainContent';
 
 export default function Home() {
   return (

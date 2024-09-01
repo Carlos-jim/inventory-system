@@ -1,5 +1,5 @@
-import Sidebar from '../../../components/sidebar/Sidebar';
-import TopNav from '../../../components/sidebar/TopNav';
+import Sidebar from '@/app/components/sidebar/Sidebar';
+import TopNav from '@/app/components/sidebar/TopNav';
 import MainContentAddProduct from '@/app/components/MainContent/MainContentAddProduct';
 
 

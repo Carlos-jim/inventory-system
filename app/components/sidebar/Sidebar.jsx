@@ -26,11 +26,11 @@ export default function Sidebar() {
       <ul className="pt-10">
         <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center hover:cursor-pointer'}`}>
           <FaHome size={24} />
-          {isOpen && <span className="ml-4 hover:cursor-pointer">Home</span>}
+          {isOpen && <span className="ml-4 hover:cursor-pointer"><a href="/page/dashboard/home">Home</a></span>}
         </li>
         <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400' : 'justify-center hover:cursor-pointer'}`}>
           <AiOutlinePlus size={24} />
-          {isOpen && <span className="ml-4 hover:cursor-pointer">Agregar</span>}
+          {isOpen && <span className="ml-4 hover:cursor-pointer"><a href="/page/dashboard/product/new-product">Agregar</a></span>}
         </li>
         <li className={`flex items-center p-2 my-2 text-white ${isOpen ? 'hover:bg-teal-400 bg-teal-400 rounded-lg' : 'justify-center hover:cursor-pointer'}`}>
           <FaBoxOpen size={24} />
