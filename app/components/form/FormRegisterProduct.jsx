@@ -73,7 +73,7 @@ export default function FormRegisterProduct() {
             className="block text-sm font-medium text-gray-700"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.4 }}
           >
             Descripción
           </motion.label>
@@ -93,7 +93,7 @@ export default function FormRegisterProduct() {
               className="block text-sm font-medium text-gray-700"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.4 }}
             >
               Precio
             </motion.label>
@@ -112,7 +112,7 @@ export default function FormRegisterProduct() {
               className="block text-sm font-medium text-gray-700"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.6 }}
             >
               Cantidad de stock
             </motion.label>
